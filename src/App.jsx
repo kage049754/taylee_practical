@@ -22,7 +22,7 @@ function App() {
   }
 
   useEffect(() => {
-    document.documentElement.style.backgroundColor = isDarkMode ? '#0f172a' : '#f8fafc'
+    document.documentElement.style.backgroundColor = isDarkMode ? '#052e2b' : '#f0fdf4'
   }, [isDarkMode])
 
   const routes = [
@@ -47,8 +47,8 @@ function App() {
       <div
         className={`min-h-screen transition-colors ${
           isDarkMode
-            ? 'dark bg-slate-900 text-slate-100'
-            : 'bg-slate-50 text-slate-900'
+            ? 'dark bg-emerald-950 text-emerald-50'
+            : 'bg-emerald-50 text-emerald-950'
         }`}
       >
         <Navbar
