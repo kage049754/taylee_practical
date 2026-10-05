@@ -51,7 +51,7 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
           placeholder="Type a name..." autoComplete="off"
           className={`mt-2 w-full rounded-lg border px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 ${
             isDarkMode
-              ? 'border-slate-600 bg-slate-800 text-white placeholder:text-slate-400'
+              ? 'border-slate-700 bg-zinc-950 text-white placeholder:text-slate-400'
               : 'border-slate-300 bg-white text-slate-900 placeholder:text-slate-400'
           }`}
         />
