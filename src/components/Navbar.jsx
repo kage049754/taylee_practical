@@ -14,14 +14,14 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
     <header
       className={`sticky top-0 z-10 border-b backdrop-blur ${
         isDarkMode
-          ? 'border-emerald-900 bg-emerald-950/95'
+          ? 'border-emerald-900 bg-black/95'
           : 'border-emerald-200 bg-white/95'
       }`}
     >
       <nav aria-label="Primary navigation" className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
         <NavLink
           to="/"
-          className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-emerald-950'}`}
+          className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}
         >
           Taylee Team Directory
         </NavLink>
