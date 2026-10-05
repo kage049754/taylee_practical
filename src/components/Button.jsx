@@ -14,6 +14,7 @@ function Button({
     <button
       type={type}
       aria-label={label}
+      title={label}
       onClick={onClick}
       className={`inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-semibold shadow-sm transition hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${variantClasses}`}
     >
