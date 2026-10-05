@@ -10,6 +10,7 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    setLoading(true)
     const timer = setTimeout(() => {
       setUsers(usersData)
       setLoading(false)
