@@ -11,7 +11,7 @@ function UserCard({
   onToggleFavorite,
 }) {
   return (
-    <article className="flex h-full flex-col rounded-xl border border-emerald-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-emerald-900 dark:bg-emerald-900/70">
+    <article className="flex h-full flex-col rounded-xl border border-emerald-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-800 dark:bg-zinc-950">
       <div className="mb-4 flex items-start justify-between gap-3">
         <div>
           <h2 className="text-xl font-bold text-emerald-950 dark:text-white">{name}</h2>
