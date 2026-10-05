@@ -4,24 +4,24 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
   const linkClasses = ({ isActive }) =>
     `rounded-md px-3 py-2 text-sm font-medium transition ${
       isActive
-        ? 'bg-blue-600 text-white underline underline-offset-4'
+        ? 'bg-emerald-700 text-white underline underline-offset-4'
         : isDarkMode
-          ? 'text-slate-200 hover:bg-slate-700'
-          : 'text-slate-700 hover:bg-slate-100'
+          ? 'text-emerald-100 hover:bg-emerald-900'
+          : 'text-emerald-800 hover:bg-emerald-50'
     }`
 
   return (
     <header
       className={`sticky top-0 z-10 border-b backdrop-blur ${
         isDarkMode
-          ? 'border-slate-700 bg-slate-900/95'
-          : 'border-slate-200 bg-white/95'
+          ? 'border-emerald-900 bg-emerald-950/95'
+          : 'border-emerald-200 bg-white/95'
       }`}
     >
       <nav aria-label="Primary navigation" className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
         <NavLink
           to="/"
-          className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}
+          className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-emerald-950'}`}
         >
           Taylee Team Directory
         </NavLink>
@@ -32,7 +32,7 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
           <NavLink to="/about" className={linkClasses}>About</NavLink>
           <span
             className={`ml-2 rounded-full px-3 py-1 text-xs font-semibold ${
-              isDarkMode ? 'bg-slate-700 text-slate-100' : 'bg-slate-100 text-slate-700'
+              isDarkMode ? 'bg-emerald-900 text-emerald-100' : 'bg-emerald-100 text-emerald-800'
             }`}
           >
             Favorites: {favoriteCount}
@@ -44,8 +44,8 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
             onClick={onToggleDarkMode}
             className={`ml-2 rounded-lg border px-3 py-2 text-sm font-semibold transition ${
               isDarkMode
-                ? 'border-slate-600 text-slate-100 hover:bg-slate-700'
-                : 'border-slate-300 text-slate-700 hover:bg-slate-100'
+                ? 'border-emerald-700 text-emerald-100 hover:bg-emerald-900'
+                : 'border-emerald-300 text-emerald-800 hover:bg-emerald-50'
             }`}
           >
             {isDarkMode ? '☀ Light Mode' : '🌙 Dark Mode'}
