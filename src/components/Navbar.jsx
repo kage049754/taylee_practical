@@ -19,11 +19,11 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
       }`}
     >
       <nav aria-label="Primary navigation" className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
-        <NavLink
-          to="/"
-          className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}
-        >
-          Taylee Team Directory
+        <NavLink to="/" className="group flex items-center gap-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-700 text-sm font-black text-white shadow-sm transition group-hover:bg-emerald-800">T</span>
+          <span className={`text-lg font-bold tracking-tight ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
+            Taylee <span className="text-emerald-700 dark:text-emerald-400">Team Directory</span>
+          </span>
         </NavLink>
 
         <div className="flex flex-wrap items-center gap-1">
