@@ -31,11 +31,15 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
-      <div className="mb-8">
+      <div className="mb-7 flex flex-col gap-4 border-b border-slate-200 pb-7 sm:flex-row sm:items-end sm:justify-between dark:border-slate-800">
         <h1 className={`text-3xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>Users</h1>
         <p className={`mt-2 ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
           {filteredUsers.length} team member{filteredUsers.length === 1 ? '' : 's'} displayed
         </p>
+        </div>
+        <span className="w-fit rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+          {favorites.length} favorite{favorites.length === 1 ? '' : 's'}
+        </span>
       </div>
 
       <label
@@ -49,7 +53,7 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
           value={search}
           onChange={(event) => setSearch(event.target.value)}
           placeholder="Type a name..." autoComplete="off"
-          className={`mt-2 w-full rounded-lg border px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 ${
+          className={`mt-2 w-full rounded-lg border px-4 py-3 outline-none transition focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/10 ${
             isDarkMode
               ? 'border-slate-700 bg-zinc-950 text-white placeholder:text-slate-400'
               : 'border-slate-300 bg-white text-slate-900 placeholder:text-slate-400'
