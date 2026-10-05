@@ -11,9 +11,14 @@ function UserCard({
   onToggleFavorite,
 }) {
   return (
-    <article className="flex h-full flex-col rounded-xl border border-emerald-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-800 dark:bg-zinc-950">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-lg dark:border-slate-800 dark:bg-zinc-950 dark:hover:border-emerald-800">
+      <div className="absolute inset-x-0 top-0 h-1 bg-emerald-700" />
       <div className="mb-4 flex items-start justify-between gap-3">
-        <div>
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-sm font-bold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+            {name.split(' ').map((part) => part[0]).join('').slice(0, 2)}
+          </div>
+          <div className="min-w-0">
           <h2 className="text-xl font-bold text-emerald-950 dark:text-white">{name}</h2>
           <p className="mt-1 text-sm font-medium text-teal-700 dark:text-teal-300">{role}</p>
         </div>
