@@ -1,0 +1,70 @@
+import { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import usersData from '../data/users'
+import ErrorMessage from '../components/ErrorMessage'
+import Loader from '../components/Loader'
+
+function UserDetails({ isDarkMode }) {
+  const { id } = useParams()
+  const [user, setUser] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+    const timer = setTimeout(() => {
+      const foundUser = usersData.find((item) => item.id === Number(id))
+      setUser(foundUser || null)
+      setLoading(false)
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [id])
+
+  useEffect(() => {
+    document.title = user ? user.name : 'User Not Found'
+  }, [user])
+
+  return (
+    <section className="mx-auto max-w-3xl px-4 py-10">
+      <Link
+        to="/users"
+        className="mb-6 inline-flex font-semibold text-blue-600 underline underline-offset-4 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+      >
+        ← Back to Users
+      </Link>
+
+      {loading ? (
+        <Loader />
+      ) : user ? (
+        <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Team Member</p>
+          <h1 className={`mt-2 text-4xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
+            {user.name}
+          </h1>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            <div>
+              <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">Email</p>
+              <p className="mt-1 text-slate-800 dark:text-slate-100">{user.email}</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">Company</p>
+              <p className="mt-1 text-slate-800 dark:text-slate-100">{user.company}</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">Role</p>
+              <p className="mt-1 text-slate-800 dark:text-slate-100">{user.role}</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">User ID</p>
+              <p className="mt-1 text-slate-800 dark:text-slate-100">{user.id}</p>
+            </div>
+          </div>
+        </article>
+      ) : (
+        <ErrorMessage message="User not found." />
+      )}
+    </section>
+  )
+}
+
+export default UserDetails
