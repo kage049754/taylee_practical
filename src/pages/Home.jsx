@@ -6,7 +6,7 @@ function Home({ isDarkMode }) {
 
   return (
     <section className="mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center px-4 py-16 text-center">
-      <span className="mb-4 rounded-full bg-emerald-100 px-4 py-1 text-sm font-semibold text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">
+      <span className="mb-4 rounded-full bg-emerald-100 px-4 py-1 text-sm font-semibold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
         React + Vite + Tailwind CSS
       </span>
       <h1 className={`text-4xl font-extrabold tracking-tight sm:text-6xl ${isDarkMode ? 'text-white' : 'text-emerald-950'}`}>
