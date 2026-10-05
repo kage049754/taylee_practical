@@ -23,6 +23,23 @@ function App() {
     document.documentElement.style.backgroundColor = isDarkMode ? '#0f172a' : '#f8fafc'
   }, [isDarkMode])
 
+  const routes = [
+    { path: '/', element: <Home isDarkMode={isDarkMode} /> },
+    {
+      path: '/users',
+      element: (
+        <Users
+          favorites={favorites}
+          onToggleFavorite={toggleFavorite}
+          isDarkMode={isDarkMode}
+        />
+      ),
+    },
+    { path: '/users/:id', element: <UserDetails isDarkMode={isDarkMode} /> },
+    { path: '/about', element: <About isDarkMode={isDarkMode} /> },
+    { path: '*', element: <NotFound isDarkMode={isDarkMode} /> },
+  ]
+
   return (
     <BrowserRouter>
       <div
@@ -40,20 +57,9 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-            <Route
-              path="/users"
-              element={
-                <Users
-                  favorites={favorites}
-                  onToggleFavorite={toggleFavorite}
-                  isDarkMode={isDarkMode}
-                />
-              }
-            />
-            <Route path="/users/:id" element={<UserDetails isDarkMode={isDarkMode} />} />
-            <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
-            <Route path="*" element={<NotFound isDarkMode={isDarkMode} />} />
+            {routes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
           </Routes>
         </main>
       </div>
