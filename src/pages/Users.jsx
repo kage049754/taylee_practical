@@ -61,7 +61,10 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
           message={users.length === 0 ? 'No users found.' : 'No users found matching your search.'}
         />
       ) : (
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          aria-label="Team member cards"
+        >
           {filteredUsers.map((user) => (
             <UserCard
               key={user.id}
