@@ -28,7 +28,7 @@ function UserDetails({ isDarkMode }) {
     <section className="mx-auto max-w-3xl px-4 py-10">
       <Link
         to="/users"
-        className="mb-6 inline-flex font-semibold text-blue-600 underline underline-offset-4 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+        className="mb-6 inline-flex font-semibold text-emerald-700 underline underline-offset-4 hover:text-emerald-800 dark:text-emerald-400 dark:hover:text-emerald-300"
       >
         ← Back to Users
       </Link>
@@ -38,8 +38,8 @@ function UserDetails({ isDarkMode }) {
           <Loader />
         </div>
       ) : user ? (
-        <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Team Member</p>
+        <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-zinc-950">
+          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Team Member</p>
           <h1 className={`mt-2 text-4xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
             {user.name}
           </h1>
