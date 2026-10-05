@@ -1,7 +1,10 @@
 function About({ isDarkMode }) {
   return (
     <section className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className={`text-3xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>About</h1>
+      <div className="mb-7">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Project</p>
+        <h1 className={`text-3xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>About the Directory</h1>
+      </div>
       <div
         className={`mt-6 rounded-2xl border p-6 shadow-sm ${
           isDarkMode
