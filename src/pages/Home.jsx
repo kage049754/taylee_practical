@@ -27,6 +27,7 @@ function Home({ isDarkMode }) {
         <span className="rounded-full border border-slate-200 px-4 py-2 dark:border-slate-800">Search &amp; filter</span>
         <span className="rounded-full border border-slate-200 px-4 py-2 dark:border-slate-800">Favorites</span>
       </div>
+      </div>
     </section>
   )
 }
