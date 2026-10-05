@@ -23,7 +23,15 @@ function UserCard({
       </div>
 
       <div className="space-y-2 text-sm text-slate-600 dark:text-slate-300">
-        <p><span className="font-semibold">Email:</span> {email}</p>
+        <p>
+          <span className="font-semibold">Email:</span>{' '}
+          <a
+            href={`mailto:${email}`}
+            className="text-blue-600 underline underline-offset-2 hover:text-blue-700 dark:text-blue-400"
+          >
+            {email}
+          </a>
+        </p>
         <p><span className="font-semibold">Company:</span> {company}</p>
       </div>
 
