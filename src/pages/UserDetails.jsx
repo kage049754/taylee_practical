@@ -41,7 +41,7 @@ function UserDetails({ isDarkMode }) {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-zinc-950">
           <div className="h-2 bg-emerald-700" />
           <div className="p-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Team Member</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Team Member</p>
           <h1 className={`mt-2 text-4xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
             {user.name}
           </h1>
@@ -62,7 +62,7 @@ function UserDetails({ isDarkMode }) {
               <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">User ID</p>
               <p className="mt-1 text-slate-800 dark:text-slate-100">{user.id}</p>
             </div>
-          </div>
+            </div>
           </div>
         </article>
       ) : (
