@@ -32,10 +32,11 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
       <div className="mb-7 flex flex-col gap-4 border-b border-slate-200 pb-7 sm:flex-row sm:items-end sm:justify-between dark:border-slate-800">
-        <h1 className={`text-3xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>Users</h1>
-        <p className={`mt-2 ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
-          {filteredUsers.length} team member{filteredUsers.length === 1 ? '' : 's'} displayed
-        </p>
+        <div>
+          <h1 className={`text-3xl font-extrabold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>Users</h1>
+          <p className={`mt-2 ${isDarkMode ? 'text-slate-300' : 'text-slate-600'}`}>
+            {filteredUsers.length} team member{filteredUsers.length === 1 ? '' : 's'} displayed
+          </p>
         </div>
         <span className="w-fit rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
           {favorites.length} favorite{favorites.length === 1 ? '' : 's'}
