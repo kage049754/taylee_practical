@@ -12,11 +12,13 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   const toggleFavorite = (userId) => {
-    setFavorites((currentFavorites) =>
-      currentFavorites.includes(userId)
-        ? currentFavorites.filter((id) => id !== userId)
-        : [...currentFavorites, userId],
-    )
+    setFavorites((currentFavorites) => {
+      if (currentFavorites.includes(userId)) {
+        return currentFavorites.filter((id) => id !== userId)
+      }
+
+      return [...currentFavorites, userId]
+    })
   }
 
   useEffect(() => {
