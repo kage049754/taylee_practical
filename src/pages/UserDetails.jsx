@@ -34,7 +34,9 @@ function UserDetails({ isDarkMode }) {
       </Link>
 
       {loading ? (
-        <Loader />
+        <div aria-live="polite">
+          <Loader />
+        </div>
       ) : user ? (
         <article className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
           <p className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Team Member</p>
