@@ -21,7 +21,7 @@ function UserDetails({ isDarkMode }) {
   }, [id])
 
   useEffect(() => {
-    document.title = user ? user.name : 'User Not Found'
+    document.title = user ? `User: ${user.name}` : 'User Not Found'
   }, [user])
 
   return (
