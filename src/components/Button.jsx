@@ -7,8 +7,8 @@ function Button({
 }) {
   const variantClasses =
     variant === 'danger'
-      ? 'bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-500'
-      : 'bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-500'
+      ? 'bg-rose-700 text-white hover:bg-rose-800 focus-visible:ring-rose-500'
+      : 'bg-teal-700 text-white hover:bg-teal-800 focus-visible:ring-teal-500'
 
   return (
     <button
