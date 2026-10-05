@@ -18,7 +18,7 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
           : 'border-slate-200 bg-white/95'
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
+      <nav aria-label="Primary navigation" className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
         <NavLink
           to="/"
           className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-slate-900'}`}
@@ -27,7 +27,7 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
         </NavLink>
 
         <div className="flex flex-wrap items-center gap-1">
-          <NavLink to="/" className={linkClasses}>Home</NavLink>
+          <NavLink to="/" end className={linkClasses}>Home</NavLink>
           <NavLink to="/users" className={linkClasses}>Users</NavLink>
           <NavLink to="/about" className={linkClasses}>About</NavLink>
           <span
