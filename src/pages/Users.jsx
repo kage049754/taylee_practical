@@ -19,8 +19,10 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
     return () => clearTimeout(timer)
   }, [])
 
+  const normalizedSearch = search.trim().toLowerCase()
+
   const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(search.toLowerCase()),
+    user.name.toLowerCase().includes(normalizedSearch),
   )
 
   useEffect(() => {
@@ -46,7 +48,7 @@ function Users({ favorites, onToggleFavorite, isDarkMode }) {
           type="search"
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="Type a name..."
+          placeholder="Type a name..." autoComplete="off"
           className={`mt-2 w-full rounded-lg border px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 ${
             isDarkMode
               ? 'border-slate-600 bg-slate-800 text-white placeholder:text-slate-400'
