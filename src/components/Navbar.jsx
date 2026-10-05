@@ -39,6 +39,8 @@ function Navbar({ favoriteCount, isDarkMode, onToggleDarkMode }) {
           </span>
           <button
             type="button"
+            aria-pressed={isDarkMode}
+            aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             onClick={onToggleDarkMode}
             className={`ml-2 rounded-lg border px-3 py-2 text-sm font-semibold transition ${
               isDarkMode
