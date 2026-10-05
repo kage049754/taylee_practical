@@ -5,7 +5,7 @@ function About({ isDarkMode }) {
       <div
         className={`mt-6 rounded-2xl border p-6 shadow-sm ${
           isDarkMode
-            ? 'border-slate-700 bg-slate-800 text-slate-200'
+            ? 'border-slate-800 bg-zinc-950 text-slate-200'
             : 'border-slate-200 bg-white text-slate-600'
         }`}
       >
